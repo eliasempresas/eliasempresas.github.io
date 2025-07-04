@@ -1,0 +1,36 @@
+stages:
+      - build
+        - test
+          - deploy
+
+          variables:
+            NODE_ENV: production
+
+            before_script:
+              - echo "Iniciando pipeline para Elias Empresas"
+                - apt-get update -qq && apt-get install -y curl
+
+                build:
+                  stage: build
+                    script:
+                        - echo "Fazendo build do projeto"
+                            - npm install
+                                - npm run build
+                                  artifacts:
+                                      paths:
+                                            - dist/
+
+                                            test:
+                                              stage: test
+                                                script:
+                                                    - echo "Executando testes automatizados"
+                                                        - npm test
+
+                                                        deploy:
+                                                          stage: deploy
+                                                            only:
+                                                                - main
+                                                                  script:
+                                                                      - echo "Deploy em ambiente de produção"
+                                                                          - ./deploy.sh
+                                                                          
