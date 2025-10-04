@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Elias Silva de Oliveira
+Empresa: Elias Empresas
+Site: https://www.eliasempresas.com
+Email: suporte@eliasempresas.com
+Cidade: Macatuba, São Paulo, Brasil
+
+/* THANKS */
+Tecnologias: HTML5, CSS3, JavaScript, Node.js, PHP, Python, MySQL
+
+/* SITE */
+Última atualização: 2025-04-09

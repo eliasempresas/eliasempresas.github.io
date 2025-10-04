@@ -1,0 +1,104 @@
+# ===========================================
+# Elias Empresas - Configuração .htaccess Avançada
+# ===========================================
+
+# -------------------------------
+# Configurações PHP
+# -------------------------------
+php_value display_errors On
+php_value date.timezone America/Sao_Paulo
+
+# -------------------------------
+# Reescrita e HTTPS
+# -------------------------------
+RewriteEngine On
+
+# Forçar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# -------------------------------
+# Tratamento de erros HTTP
+# -------------------------------
+# 4xx - Cliente
+ErrorDocument 400 https://www.eliasempresas.com/erros.php?e=400&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 401 https://www.eliasempresas.com/erros.php?e=401&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 402 https://www.eliasempresas.com/erros.php?e=402&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 403 https://www.eliasempresas.com/erros.php?e=403&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 404 https://www.eliasempresas.com/erros.php?e=404&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 405 https://www.eliasempresas.com/erros.php?e=405&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 406 https://www.eliasempresas.com/erros.php?e=406&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 407 https://www.eliasempresas.com/erros.php?e=407&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 408 https://www.eliasempresas.com/erros.php?e=408&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 409 https://www.eliasempresas.com/erros.php?e=409&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 410 https://www.eliasempresas.com/erros.php?e=410&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 411 https://www.eliasempresas.com/erros.php?e=411&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 412 https://www.eliasempresas.com/erros.php?e=412&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 413 https://www.eliasempresas.com/erros.php?e=413&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 414 https://www.eliasempresas.com/erros.php?e=414&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 415 https://www.eliasempresas.com/erros.php?e=415&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 416 https://www.eliasempresas.com/erros.php?e=416&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 417 https://www.eliasempresas.com/erros.php?e=417&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 418 https://www.eliasempresas.com/erros.php?e=418&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 421 https://www.eliasempresas.com/erros.php?e=421&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 422 https://www.eliasempresas.com/erros.php?e=422&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 423 https://www.eliasempresas.com/erros.php?e=423&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 424 https://www.eliasempresas.com/erros.php?e=424&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 425 https://www.eliasempresas.com/erros.php?e=425&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 426 https://www.eliasempresas.com/erros.php?e=426&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 428 https://www.eliasempresas.com/erros.php?e=428&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 429 https://www.eliasempresas.com/erros.php?e=429&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 431 https://www.eliasempresas.com/erros.php?e=431&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 451 https://www.eliasempresas.com/erros.php?e=451&url=https://%{HTTP_HOST}%{REQUEST_URI}
+
+# 5xx - Servidor
+ErrorDocument 500 https://www.eliasempresas.com/erros.php?e=500&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 501 https://www.eliasempresas.com/erros.php?e=501&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 502 https://www.eliasempresas.com/erros.php?e=502&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 503 https://www.eliasempresas.com/erros.php?e=503&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 504 https://www.eliasempresas.com/erros.php?e=504&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 505 https://www.eliasempresas.com/erros.php?e=505&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 506 https://www.eliasempresas.com/erros.php?e=506&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 507 https://www.eliasempresas.com/erros.php?e=507&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 508 https://www.eliasempresas.com/erros.php?e=508&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 510 https://www.eliasempresas.com/erros.php?e=510&url=https://%{HTTP_HOST}%{REQUEST_URI}
+ErrorDocument 511 https://www.eliasempresas.com/erros.php?e=511&url=https://%{HTTP_HOST}%{REQUEST_URI}
+
+# -------------------------------
+# Segurança Avançada
+# -------------------------------
+# Bloqueia acesso direto ao .htaccess, .env, arquivos sensíveis
+<FilesMatch "(\.htaccess|\.env|\.ini|\.log|\.sh)$">
+    Require all denied
+</FilesMatch>
+
+# Bloqueia listagem de diretórios
+Options -Indexes
+
+# Protege uploads contra execução de scripts
+### <Directory "/path/to/uploads">
+###     php_flag engine off
+### </Directory>
+
+# -------------------------------
+# Proteção contra Hotlink
+# -------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https://(www\.)?eliasempresas\.com/ [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|mp4)$ - [F,NC,L]
+</IfModule>
+
+# -------------------------------
+# Cache básico para performance
+# -------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/gif "access plus 30 days"
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+</IfModule>

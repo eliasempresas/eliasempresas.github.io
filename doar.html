@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doações - Elias Empresas</title>
+  <link rel="stylesheet" href="https://assets.eliasempresas.com/eliasempresas.com/styles/style.css"/>
+  <link rel="stylesheet" href="https://assets.eliasempresas.com/eliasempresas.com/styles/menu.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .doacao-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .valor-btn {
+      margin: 5px;
+    }
+    .pix-img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .plataformas {
+      margin-top: 40px;
+    }
+    .plataformas a {
+      display: block;
+      margin: 6px 0;
+      color: #dc3545;
+      text-decoration: none;
+    }
+    .plataformas a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<!-- Menu -->
+      <footer id="menu"></footer>
+      <footer>
+    <?php include 'https://assets.eliasempresas.com/menu.php'; ?>
+  </footer>
+
+  <div class="doacao-container text-center">
+    <h1 class="mb-4">Faça uma doação</h1>
+    <p class="lead">Ajude as Elias Empresas a continuar criando soluções inovadoras.</p>
+
+    <div class="d-flex justify-content-center flex-wrap">
+      <button class="btn btn-outline-danger valor-btn" onclick="setValor(5)">R$ 5</button>
+      <button class="btn btn-outline-danger valor-btn" onclick="setValor(10)">R$ 10</button>
+      <button class="btn btn-outline-danger valor-btn" onclick="setValor(20)">R$ 20</button>
+      <button class="btn btn-outline-danger valor-btn" onclick="setValor(50)">R$ 50</button>
+    </div>
+
+    <div class="my-3">
+      <label for="valorPersonalizado" class="form-label mt-3">Outro valor</label>
+      <input type="number" id="valorPersonalizado" class="form-control" placeholder="Digite o valor (R$)">
+    </div>
+
+    <div class="my-4">
+      <h5>Pagamento via Pix</h5>
+      <img src="https://arquivos.eliasempresas.com/ARQUIVOS/IMAGENS/PIX_QRCODE.png" alt="QR Code Pix" class="pix-img">
+      <p class="mt-2"><strong>Chave Pix:</strong> eliasempresas0@gmail.com</p>
+    </div>
+
+    <button class="btn btn-danger btn-lg w-100 mt-3" onclick="confirmarDoacao()">Doar agora</button>
+
+    <div class="plataformas">
+      <h4 class="mt-5">Outras plataformas de apoio</h4>
+      <a href="https://www.patreon.com/eliasempresas" target="_blank">❤️ Apoiar no Patreon</a>
+      <a href="https://github.com/sponsors/eliasempresas" target="_blank">🌟 GitHub Sponsors</a>
+      <a href="https://picpay.me/eliasempresas" target="_blank">💸 PicPay</a>
+      <a href="https://ko-fi.com/eliasempresas" target="_blank">☕ Ko-fi</a>
+      <a href="https://www.vakinha.com.br/vaquinha/eliasempresas" target="_blank">🎯 Vakinha</a>
+      <a href="https://apoia.se/eliasempresas" target="_blank">📢 Apoia.se</a>
+      <a href="https://www.catarse.me/eliasempresas" target="_blank">🚀 Catarse</a>
+      <a href="https://paypal.me/eliasempresas" target="_blank">💳 PayPal</a>
+      <a href="https://benfeitoria.com/eliasempresas" target="_blank">🌱 Benfeitoria</a>
+      <a href="https://liberapay.com/eliasempresas" target="_blank">💰 Liberapay</a>
+      <a href="https://buymeacoffee.com/eliasempresas" target="_blank">🥤 Buy Me a Coffee</a>
+      <a href="https://apoia.ai/eliasempresas" target="_blank">🧡 Apoia.ai</a>
+      <a href="https://padrim.com.br/eliasempresas" target="_blank">🎁 Padrim</a>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+      <footer id="footer"></footer>
+      <footer>
+    <?php include 'https://assets.eliasempresas.com/footer.php'; ?>
+  </footer>
+</body>
+</html>

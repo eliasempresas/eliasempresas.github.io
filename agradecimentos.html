@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agradecimentos | ELIAS EMPRESAS</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+
+<body>
+
+  <!-- Ícone do menu -->
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <!-- Menu lateral -->
+  <nav class="sidebar" id="sidebar">
+    <a href="index.html">INÍCIO</a>
+    <a href="https://loja.eliasempresas.com/">LOJA DE COISAS</a>
+    <a href="servicos.html">SERVIÇOS</a>
+    <a href="mapa.html">MAPA</a>
+    <a href="suporte.html">SUPORTE</a>
+    <a href="sobre.html">SOBRE</a>
+
+    <!-- Seção para usuário não logado -->
+    <div id="auth-section" class="bottom-user">
+      <img src="https://arquivos.eliasempresas.com/ARQUIVOS/IMAGENS/IDEE/logo.png" alt="Logo Elias Empresas" />
+      <div>
+        <a href="https://id.eliasempresas.com/login">LOGIN</a> |
+        <a href="https://id.eliasempresas.com/registrar">REGISTRAR</a>
+      </div>
+    </div>
+
+    <!-- Seção para usuário logado -->
+    <div id="account-section" class="account-section" style="display:none;">
+      <div class="user-info" onclick="toggleSubmenu()">
+        <img id="user-photo" src="" alt="Foto do Usuário" />
+        <span id="user-name"></span>
+        <span id="arrow">&#x25BC;</span>
+      </div>
+      <div id="submenu" class="submenu">
+        <a href="https://id.eliasempresas.com/conta?secao=informacoes">INFORMAÇÕES</a>
+        <a href="https://id.eliasempresas.com/conta?secao=seguranca">SEGURANÇA</a>
+        <a href=https://id.eliasempresas.com/conta?secao=pagamentos">PAGAMENTOS</a>
+        <a href="https://id.eliasempresas.com/conta?secao=mais_opcoes">MAIS OPÇÕES</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Importar seu script de menu -->
+  <script src="scripts/menu.js"></script>
+
+</body>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 40px;
+      color: #333;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ELIAS EMPRESAS</h1>
+  <p>Visão, Inovação e Propósito</p>
+</header>
+
+<main>
+  <h1>Agradecimentos</h1>
+  <p>
+    A jornada da ELIAS EMPRESAS é impulsionada por pessoas. Este espaço é dedicado a reconhecer cada colaborador, parceiro, cliente e apoiador que acredita em nosso propósito: transformar o futuro com tecnologia, inteligência e autonomia.
+  </p>
+
+  <h2>Colaboradores</h2>
+  <p>
+    Aos profissionais que constroem essa empresa todos os dias com dedicação, resiliência e excelência, nossa gratidão. Vocês são a base da nossa operação.
+  </p>
+
+  <h2>Clientes e Usuários</h2>
+  <p>
+    A confiança de cada pessoa que utiliza nossos serviços é a razão da nossa existência. Obrigado por impulsionarem nossa evolução contínua.
+  </p>
+
+  <h2>Parceiros Estratégicos</h2>
+  <p>
+    A todos os que caminham ao nosso lado — fornecedores, desenvolvedores, comunidades open-source e aliados de negócio — o nosso reconhecimento por fazerem parte dessa construção conjunta.
+  </p>
+
+  <h2>Você</h2>
+  <p>
+    Se você está lendo esta página, saiba: sua presença já é um ativo. Obrigado por apoiar a transformação. Estamos apenas começando.
+  </p>
+</main>
+
+<!-- Rodapé -->
+  <footer>
+    <?php include 'footer.php'; ?>
+  </footer>
